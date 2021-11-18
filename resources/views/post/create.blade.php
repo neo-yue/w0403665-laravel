@@ -30,7 +30,7 @@
                             @error('content')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
-                            <input name="create_by" type="hidden" id="create_by" value="{{Auth::user()->id}}">
+                            <input name="created_by" type="hidden" id="created_by" value="{{Auth::user()->id}}">
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-lg" aria-pressed="true">Submit</button>

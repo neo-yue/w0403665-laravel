@@ -34,10 +34,10 @@
                                             {{$post->updated_at}}
                                         </p>
                                         @if (Auth::user())
-                                            @if (Auth::user()->id==$post->create_by)
+                                            @if (Auth::user()->id==$post->created_by)
                                                 <a  href="/posts/{{$post->id}}/edit"><button type="button" class="btn btn-warning btn-lg active m-2">Edit</button></a>
                                             @endif
-                                            @if (Auth::user()->id==$post->create_by or Auth::user()->Moderator())
+                                            @if (Auth::user()->id==$post->created_by or Auth::user()->Moderator())
                                                 <button type="submit" class="btn btn-danger">DELETE</button>
                                             @endif
 

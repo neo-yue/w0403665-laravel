@@ -27,7 +27,7 @@ class PostController extends Controller
         $data=request()->validate([
             'title'=>'min:5',
             'content'=>'min:10',
-            'create_by'=>'required'
+            'created_by'=>'required'
         ]);
 
 
