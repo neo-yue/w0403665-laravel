@@ -8,8 +8,9 @@
 
                 <div class="card-header">Create New Post</div>
                 <div class="card-body">
-                    <form action="/post/{{$post->id}}" method="post">
-                        @method('PATCH')
+                    <form action="/posts" method="post">
+                        @csrf
+
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input name="title" type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter Title">

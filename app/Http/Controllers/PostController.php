@@ -58,7 +58,7 @@ class PostController extends Controller
 
 
 
-        return redirect('/post.show');
+        return redirect('/posts/'.$post->id);
     }
 
     public function destroy(Post $post){

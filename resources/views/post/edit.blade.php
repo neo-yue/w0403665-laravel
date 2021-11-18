@@ -6,9 +6,10 @@
         <div class="col-md-8">
             <div class="card">
 
-                <div class="card-header">Create New Post</div>
+                <div class="card-header">Change your Post</div>
                 <div class="card-body">
-                    <form action="/posts" method="post">
+                    <form action="/posts/{{$post->id}}" method="post">
+                        @method('PATCH')
                         @csrf
                         <div class="form-group">
                             <label for="title">Title</label>
@@ -25,7 +26,7 @@
                             @error('content')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
-                            <input name="create_by" type="hidden" id="create_by" value="{{Auth::user()->id}}">
+
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-lg" aria-pressed="true">Submit</button>
