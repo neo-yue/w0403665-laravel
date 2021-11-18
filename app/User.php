@@ -55,5 +55,17 @@ class User extends Authenticatable
     }
 
     use SoftDeletes;
+    public function Moderator(){
+        $roles=$this->roles()->get();
+        foreach( $roles as $role) {
+                if ($role->name == 'Moderator') {
+                    return true;
+
+                } else {
+                    return false;
+                }
+            }
+            return true;
+        }
 
 }

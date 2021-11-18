@@ -11,17 +11,17 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input name="name" type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name" autocomplete="off" >
+                                <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Name" autocomplete="off" >
                                 @error('name') <p style="color: red">{{$message}}</p> @enderror
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input name="email" type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter Email">
+                                <input name="email" type="email" class="form-control" id="email"  placeholder="Enter Email">
                                 @error('email') <p style="color: red">{{$message}}</p> @enderror
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" autocomplete="off"  aria-describedby="password" placeholder="Enter Password">
+                                <input type="password" class="form-control" name="password" autocomplete="off"   placeholder="Enter Password">
                                 @error('password') <p style="color: red">{{$message}}</p> @enderror
                             </div>
                             <div class="card-header">Roles</div>

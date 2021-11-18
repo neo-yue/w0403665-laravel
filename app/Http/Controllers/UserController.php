@@ -33,7 +33,7 @@ class UserController extends Controller
         return view('manager.create',compact('roles'));
     }
 
-    public function store(\App\role $roles){
+    public function store(){
 
 
         $data=request()->validate([

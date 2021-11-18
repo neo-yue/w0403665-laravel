@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/managers','UserController');
 
 Route::resource('/posts','PostController');
+
+Route::group(['middleware'=>['RoleCheck']],function (){
+    Route::resource('/managers','UserController');
+});

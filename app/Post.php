@@ -11,7 +11,18 @@ class Post extends Model
 
     use SoftDeletes;
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'create_by','id');
 
     }
+
+    public function path(){
+
+        return url('/posts/'.$this->id);
+    }
+
+//    public function publicPath(){
+//
+//        return url("/posts/".$this->id.'-'.Str::slug($this->title));
+//
+//    }
 }
