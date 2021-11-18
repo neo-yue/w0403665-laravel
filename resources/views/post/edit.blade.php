@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
+                @if (session('message'))
+                    <div class="alert alert-danger" style="color: red" >
+                        {{ session('message') }}
+                    </div>
+                @endif
                 <div class="card-header">Change your Post</div>
                 <div class="card-body">
                     <form action="/posts/{{$post->id}}" method="post">

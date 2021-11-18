@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="card mt-4">
-                        <div class="card-header">My Questionnaires</div>
+                        <div class="card-header">Posts</div>
 
                         <div class="card-body">
                             <ul class="list-group">
