@@ -54,7 +54,13 @@ class User extends Authenticatable
 
     }
 
+    public function themes(){
+        return $this->hasMany(Theme::class);
+
+    }
     use SoftDeletes;
+
+
     public function Moderator(){
         $roles=$this->roles()->get();
         foreach( $roles as $role) {

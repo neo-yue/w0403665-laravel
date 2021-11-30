@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
-
+    @if (session('message'))
+        <div class="alert alert-danger" style="color: red" >
+            {{ session('message') }}
+        </div>
+    @endif
 
 <div class="card mt-4">
     <div class="card-header">User Administration</div>

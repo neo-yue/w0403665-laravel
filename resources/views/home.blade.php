@@ -1,14 +1,22 @@
 @extends('layouts.app')
-
 @section('content')
+    @if (session('message'))
+        <div class="alert alert-danger"  style="text-align: center">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    @if (session('confirm'))
+        <div class="alert alert-success align-content-center" style="text-align: center">
+            {{ session('confirm') }}
+        </div>
+    @endif
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                @if (session('message'))
-                    <div class="alert alert-danger" style="color: red" >
-                        {{ session('message') }}
-                    </div>
-                @endif
+
+
+
                     <div class="card">
                         <div class="card-header">Dashboard</div>
                         <div class="card-body">

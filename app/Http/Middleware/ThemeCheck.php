@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Redirect;
 
-class RoleCheck
+class ThemeCheck
 {
     /**
      * Handle an incoming request.
@@ -19,10 +19,8 @@ class RoleCheck
         $roles=$request->user()->roles;
 
         foreach($roles as $role){
-            if($role->id!=1){
-                session()->flash('message', 'Denied-You do not have permissions to access User Management');
-                return redirect::back();
-//                return redirect::back()->with('message','Denied-You do not have permissions to access User Management');
+            if($role->id!=3){
+                return redirect::back()->with('message','Denied-You do not have permissions to access Theme Management');
 
             }
 

@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
-
+    @if (session('message'))
+        <div class="alert alert-danger" style="color: red" >
+            {{ session('message') }}
+        </div>
+    @endif
 <h1>Admin User Detail</h1>
 
 <form action="/managers/{{$manager->id}}" method="post">

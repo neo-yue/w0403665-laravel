@@ -33,9 +33,9 @@ class PostController extends Controller
 
         $post=Post::create($data);
 
+        session()->flash('confirm', 'Post successfully');
 
-
-        return redirect('/posts/'.$post->id);
+        return redirect('/home');
     }
 
     public function show(Post $post){
@@ -56,7 +56,7 @@ class PostController extends Controller
 
         $post->update($this->validateData());
 
-
+        session()->flash('confirm', 'Update completed');
 
         return redirect('/posts/'.$post->id);
     }
@@ -66,7 +66,7 @@ class PostController extends Controller
         $id = Auth::user()->id;
         $post->deleted_by=$id;
         $post->save();
-
+        session()->flash('confirm', 'Successfully deleted posts');
         return redirect('/home');
 
     }

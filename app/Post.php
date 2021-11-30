@@ -20,9 +20,4 @@ class Post extends Model
         return url('/posts/'.$this->id);
     }
 
-//    public function publicPath(){
-//
-//        return url("/posts/".$this->id.'-'.Str::slug($this->title));
-//
-//    }
 }

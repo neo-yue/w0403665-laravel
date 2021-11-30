@@ -3,8 +3,13 @@
 @section('content')
 
     @if (session('message'))
-        <div class="alert alert-danger" style="color: red" >
+        <div class="alert alert-danger" style="text-align: center" >
             {{ session('message') }}
+        </div>
+    @endif
+    @if (session('confirm'))
+        <div class="alert alert-success " style="text-align: center" >
+            {{ session('confirm') }}
         </div>
     @endif
     <div class="jumbotron">
