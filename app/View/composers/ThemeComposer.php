@@ -1,5 +1,5 @@
 <?php
-namespace App\View\Composers;
+namespace App\View\composers;
 
 use App\Theme;
 use Illuminate\Support\Facades\Cookie;

@@ -5,7 +5,7 @@ namespace App\Providers;
 
 
 use App\Theme;
-use App\View\Composers\ThemeComposer;
+use App\View\composers\ThemeComposer;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
