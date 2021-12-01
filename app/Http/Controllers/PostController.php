@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,14 +31,14 @@ class PostController extends Controller
         ]);
 
 
-        $post=Post::create($data);
+        $post=post::create($data);
 
         session()->flash('confirm', 'Post successfully');
 
         return redirect('/home');
     }
 
-    public function show(Post $post){
+    public function show(post $post){
 
         $post->load('user');
 
@@ -47,12 +47,12 @@ class PostController extends Controller
 
     }
 
-    public function edit(Post $post ){
+    public function edit(post $post ){
 
         return view('post.edit',compact('post'));
     }
 
-    public function update(Post $post){
+    public function update(post $post){
 
         $post->update($this->validateData());
 
@@ -61,7 +61,7 @@ class PostController extends Controller
         return redirect('/posts/'.$post->id);
     }
 
-    public function destroy(Post $post){
+    public function destroy(post $post){
         $post->delete();
         $id = Auth::user()->id;
         $post->deleted_by=$id;

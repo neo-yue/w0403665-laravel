@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Post;
+use App\post;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class PostPolicy
      * Determine whether the user can view the post.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\post  $post
      * @return mixed
      */
-    public function view(User $user, Post $post)
+    public function view(User $user, post $post)
     {
         //
     }
@@ -48,10 +48,10 @@ class PostPolicy
      * Determine whether the user can update the post.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\post  $post
      * @return mixed
      */
-    public function update(User $user, Post $post)
+    public function update(User $user, post $post)
     {
         //
     }
@@ -60,10 +60,10 @@ class PostPolicy
      * Determine whether the user can delete the post.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\post  $post
      * @return mixed
      */
-    public function delete(User $user, Post $post)
+    public function delete(User $user, post $post)
     {
         //
     }
@@ -72,10 +72,10 @@ class PostPolicy
      * Determine whether the user can restore the post.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\post  $post
      * @return mixed
      */
-    public function restore(User $user, Post $post)
+    public function restore(User $user, post $post)
     {
         //
     }
@@ -84,10 +84,10 @@ class PostPolicy
      * Determine whether the user can permanently delete the post.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\post  $post
      * @return mixed
      */
-    public function forceDelete(User $user, Post $post)
+    public function forceDelete(User $user, post $post)
     {
         //
     }
