@@ -1,8 +1,8 @@
 <?php
 
-namespace App\HTTP\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use App\HTTP\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;
 

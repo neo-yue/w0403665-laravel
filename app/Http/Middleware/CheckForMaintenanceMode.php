@@ -1,6 +1,6 @@
 <?php
 
-namespace App\HTTP\Middleware;
+namespace App\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 
