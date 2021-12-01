@@ -33,9 +33,9 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('*',ThemeComposer::class);  //option1
 
-//        if(env('APP_ENV'=='production')) {
-//            URL::forceScheme('https');
-//        }
+        if(env('APP_ENV') =='production') {
+            URL::forceScheme('https');
+        }
 
 
 //        View::composer('*',function ($view){
