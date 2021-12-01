@@ -16,7 +16,7 @@ class EnforceHTTPS
      */
     public function handle($request, Closure $next)
     {
-        if(App::environment('production') &&$request->secure()){
+        if(App::environment('production') && !$request->secure()){
 
             return redirect()->secure($request->getRequestUri());
         }
