@@ -18,16 +18,14 @@ class ThemeCheck
     {
         $roles=$request->user()->roles;
 
-        foreach($roles as $role){
-            if($role->id!=3){
-                return redirect::back()->with('message','Denied-You do not have permissions to access Theme Management');
-
+        foreach($roles as $role) {
+            if ($role->id==3) {
+                return $next($request);
             }
 
+
         }
+        return redirect::back()->with('message','Denied-You do not have permissions to access Theme Management');
 
-
-
-        return $next($request);
     }
 }
